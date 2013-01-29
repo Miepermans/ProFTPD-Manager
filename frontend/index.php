@@ -16,11 +16,17 @@ if(isset($_POST['username'])) {
   if($_POST['username'] == "username") {
   } else {
     $username = $_POST['username'];
+    $username = htmlentities($username);
+    $username = addslashes($username);
+    $username = mysql_real_escape_string($username);
   }
 }
 
 if(isset($_POST['password'])) {
-  $password = $_POST['password'];
+    $password = $_POST['password'];
+    $password = htmlentities($password);
+    $password = addslashes($password);
+    $password = mysql_real_escape_string($password);
 }
 
 if(isset($username)) {
@@ -38,7 +44,9 @@ if(isset($username) && isset($password)) {
 
 if(isset($_POST['id'])) {
   foreach($_POST['id'] as $id) {
-    mysql_query("UPDATE `ftpuser` SET `deleted` = '1' WHERE `id` = '$id'")
+    $passrand = rand_string(15);
+    $temppass = "deleted".$passrand;
+    mysql_query("UPDATE `ftpuser` SET `deleted` = '1', `passwd` = '$temppass' WHERE `id` = '$id'")
     or die(mysql_error());
   }
 }
