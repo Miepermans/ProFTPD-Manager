@@ -1,7 +1,8 @@
 <?php
 
-include "../include/dbinfo.inc.php";
-include "../include/config.inc.php";
+set_include_path("../");
+include "include/dbinfo.inc.php";
+include "include/config.inc.php";
 
 mysql_connect($aDBInfo['address'],$aDBInfo['username'],$aDBInfo['password']) or die(mysql_error());
 mysql_select_db($aDBInfo['database']);
