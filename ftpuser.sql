@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: localhost
--- Genereertijd: 29 jan 2013 om 14:41
+-- Genereertijd: 04 feb 2013 om 15:08
 -- Serverversie: 5.5.24-log
 -- PHP-versie: 5.3.13
 
@@ -37,10 +37,11 @@ CREATE TABLE IF NOT EXISTS `ftpuser` (
   `count` int(11) NOT NULL DEFAULT '0',
   `accessed` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `validtill` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `userid` (`userid`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='ProFTP user table' AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COMMENT='ProFTP user table' AUTO_INCREMENT=21 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
