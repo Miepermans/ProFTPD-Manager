@@ -63,7 +63,7 @@ echo '
 
 
     <div class="container">
-      <h1>Create FTP accounts</h1>
+      <h1>Create 8021X accounts</h1>
       <p>
         <form action "/frontend/index.php" method="post">
         <table class="table table-condensed">
