@@ -1,5 +1,5 @@
-	<?php
-    $aDBInfo['address']  = 'hostname';
+<?php
+    $aDBInfo['address']  = 'address';
     $aDBInfo['username'] = 'username';
     $aDBInfo['password'] = 'password';
     $aDBInfo['database'] = 'database';
