@@ -1,3 +1,6 @@
-<?php
-  $config['name'] = '8021X-Manager';
+	<?php
+    $config['uid'] = 'uidnumber';
+    $config['gid'] = 'gidnumber';
+    $config['shell'] = '/sbin/nologin';
+    $config['path'] = '/home/yourmap/';
 ?>
